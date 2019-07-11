@@ -1,0 +1,15 @@
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+	<div class="field">
+		<%= s.label :title %><br />
+		<%= s.text_field :title %>
+	</div>
+	<div class="field">
+		<p><%= s.label :min_price, "min price" %> - <%= s.text_field :min_price, size: 10 %></p>
+		<p><%= s.label :max_price, "max price" %> - <%= s.text_field :max_price, size: 10 %></p>
+	</div>
+ 	
+ 	<div class="actions"><%= s.submit "search", clas: "pure-button pure-button-primary" %>
+ 	</div>
+
+<% end %>

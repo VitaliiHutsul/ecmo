@@ -1,0 +1,15 @@
+ <% if @search.search_cart.empty? %>
+ 	<p> No results </p>
+ <% else %>
+ 	<% @search.search_cart.each do |k| %>
+ 		<br>
+
+ 		<div class="div">
+ 			<h1><%= k.title %></h1>
+ 			<p>Price: $<%= k.price %></p>
+ 		</div>
+
+ 	<% end %>
+ <% end %>	
+ <%= link_to "back", new_search_path %>
+ <%= link_to "home", root_path %>
